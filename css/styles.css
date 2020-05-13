@@ -1,14 +1,63 @@
+/* soft reset do CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
-background-image: url('https://miro.medium.com/max/15360/1*qVEpLo-stCmcwVwdtf4_yg.jpeg');
+background-image: url('../img/bg.jpg');
 /*background-size:  500px; Vai definir tanto a largura e altura da página como 500px*/
+background-color: white;
 background-size: auto 100vh;
 font-family: Arial;
 height: 100vh;
+font-size: 12px;
+}
+
+/* Se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+body {
+        font-size: 14px;
+    }
+}
+
+/* Breackpoint */
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* Breackpoint */
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* Breackpoint */
+@media (min-width: 1200px) {
+    body {
+        font-size: 22px;
+    }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu {
-background-color: white;
+background-color: #0D3046;
+position: fixed;
+width: 100vw;
+top: 0;
 }
+
 
 .menu ul {
 display: flex; /*O flex força com que os links fiquem ao lado do outro, ou seja, em forma de colunas*/
@@ -19,20 +68,83 @@ justify-content: space-around; /*Dá um espaço entre as colunas*/
 list-style: none;
 }
 
+.menu a {
+display: block;
+padding: 10px 20px;   
+}
+
 a {
-color: teal;
+color: white;
 text-decoration: none;
 }
 
 a:hover {
 text-decoration: underline;
 }
+
+.descricao {
+    display: flex;
+    margin-top: -200px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfil {
+    width: 180px;
+    border-radius: 20%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
 .site-subtitle,
 .site-title {
-color: #0E3046;
+color: white;
+text-shadow: 2px 2px 5px #0D3046;
 text-align: center;
+font-family: 'Caveat Brush'; 
+}
+
+.site-title {
+    font-size: 2em; 
 }
 
 .site-subtitle {
 font-style: italic;
+font-family: 'Caveat Brush';
+}
+
+.portifolio .grid {
+    /*display: grid; /* O grid permite escolher as colunas para que ele gere /*
+    gap: 2em;  /* Vai definir o espaçamento entre cada coluna ou linha do grid 
+    grid-template-columns: 240px 500px 300px; */
+}
+
+.img-portfolio{
+    height: 180px;
+    width: 200px;
+    border-radius: 25%;
+    display: inline-block;
+    object-fit: contain; /* Object-fit faz os ajustes automáticos, sem distorcer a imagem */
+}
+
+.portifolio{
+    background-color: white;
+    font-family: 'Handlee';
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 3em;
+    align-items: baseline;
+    flex-wrap: wrap;
+    
+}
+
+.sub-portifolio{
+   color: #0D3046;
+   display: block;
+   padding: 3em;
+   text-align: center;
+   background-color: white;
+   font-family: 'Handlee';
 }
