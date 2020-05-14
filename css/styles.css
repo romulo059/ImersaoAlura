@@ -71,7 +71,15 @@ list-style: none;
 .menu a {
 display: block;
 padding: 10px 20px;   
+transition: background-color 0.5s, color 0.5s;
+transition: transform 500ms;
 }
+
+
+.menu a:hover {
+    text-decoration:none;
+}
+
 
 a {
 color: white;
@@ -80,6 +88,8 @@ text-decoration: none;
 
 a:hover {
 text-decoration: underline;
+border-radius: 3%;
+transform: scale(1.1);
 }
 
 .descricao {
@@ -87,6 +97,26 @@ text-decoration: underline;
     margin-top: -200px;
     flex-direction: column;
     align-items: center;
+}
+
+.nome {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+
+    animation:normal 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+    0% {
+        transform: scale(0.2) translateY(50vh);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+
 }
 
 .perfil {
@@ -126,6 +156,11 @@ font-family: 'Caveat Brush';
     border-radius: 25%;
     display: inline-block;
     object-fit: contain; /* Object-fit faz os ajustes automáticos, sem distorcer a imagem */
+    transition: transform 500ms;
+}
+
+.img-portfolio:hover {
+    transform: scale(1.1);
 }
 
 .portifolio{
@@ -147,4 +182,23 @@ font-family: 'Caveat Brush';
    text-align: center;
    background-color: white;
    font-family: 'Handlee';
+}
+
+.contato {
+    color: #0D3046;
+   display: block;
+   padding: 1em;
+   text-align: center;
+   background-color: white;
+   font-family: 'Handlee';
+}
+
+.sub-contato {
+    padding: 0.5em;
+}
+
+.contato a {
+    color: #0D3046;
+    font-size: 1.5em;
+    text-decoration: none;
 }
